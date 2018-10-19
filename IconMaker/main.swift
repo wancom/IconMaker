@@ -11,8 +11,6 @@ import Cocoa
 
 
 func convertIcon(image:NSImage,size:NSSize,path:String) -> Bool {
-    print(path)
-
     let convertImg = NSImage(size: size)
     image.size = size
     
@@ -23,7 +21,6 @@ func convertIcon(image:NSImage,size:NSSize,path:String) -> Bool {
     
     guard let tiffData = convertImg.tiffRepresentation else {return false}
     guard let bitmap = NSBitmapImageRep(data: tiffData) else {return false}
-    print(bitmap.size)
     guard let imgData = bitmap.representation(using: .png, properties: [:]) else {
         return false
     }
