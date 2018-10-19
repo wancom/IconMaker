@@ -6,7 +6,7 @@ and I can't guarantee the appiconset can be used.
 
 ## HOW TO USE
 ### Compile
-swiftc main.swift iconmaker
+swiftc main.swift -o iconmaker
 mv iconmaker /path/to/dir
 
 ### Usage
